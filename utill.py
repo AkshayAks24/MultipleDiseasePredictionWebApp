@@ -3,8 +3,8 @@ import pickle
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 # loading the saved model
-loaded_model_dia = pickle.load(open('model\DiabetesPrediction.pickle', 'rb'))
-loaded_model_chd = pickle.load(open('model\CHDmodel.pickle', 'rb'))
+loaded_model_dia = pickle.load(open('DiabetesPrediction.pickle', 'rb'))
+loaded_model_chd = pickle.load(open('CHDmodel.pickle', 'rb'))
 
 
 # creating a predictive function
