@@ -36,7 +36,6 @@
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
 </head>
-
 <body>
 
   <!-- ======= Top Bar ======= -->
@@ -59,40 +58,28 @@
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo me-auto"><a href="index.html">Hygeia</a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto"><img src="static/img/logo.png" alt="" class="img-fluid"></a>-->
+      <h1 class="logo me-auto"><a href="/">Hygeia</a></h1>
+      
 
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto" href="#departments">Departments</a></li>
-          <li><a class="nav-link scrollto" href="#doctors">Doctors</a></li>
+          <li><a class="nav-link scrollto active" href="/#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="/#about">About</a></li>
+          <li><a class="nav-link scrollto" href="/#services">Services</a></li>
           <li class="dropdown"><a href="#"><span>Medical Condition</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Coronary heart disease</a></li>
-              <!-- <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li> -->
-              <li><a href="#">Parkinson's disease</a></li>
-              <li><a href="#">Diabetes mellitus</a></li>
-              <li><a href="#">Breast cancer </a></li>
+              <li><a href="chd.html">Coronary heart disease</a></li>
+              <li><a href="parkinsons.html">Parkinson's disease</a></li>
+              <li><a href="diabetes.html">Diabetes mellitus</a></li>
+              <li><a href="breastcancer.html">Breast cancer </a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="/#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
-      <!-- <a href="#appointment" class="appointment-btn scrollto"><span class="d-none d-md-inline">Make an</span> Appointment</a> -->
+     
 
     </div>
   </header>
@@ -107,9 +94,9 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>Inner Page</h2>
+          <h2>Breast Cancer</h2>
           <ol>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li>Inner Page</li>
           </ol>
         </div>
@@ -128,7 +115,7 @@
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <form action="/submit" id="survey-form" method="POST" >
+        <form action="/submitbre" id="survey-form" method="POST" >
           <div class="row">
             <div class="col-md-4 form-group ">
               <div class="input-tab ">
@@ -138,7 +125,7 @@
 
             <div class="col-md-4 form-group mt-3 mt-md-0 ">
               <div class="input-tab">
-              <input class="input-field form-control" type="email" id="email" name="email" placeholder="Your Email" required></div>
+              <input class="input-field form-control" type="text" id="email" name="glucose" placeholder="glucose level" required></div>
               <div class="validate"></div>
             </div>
 
@@ -153,19 +140,19 @@
           <div class="row">
             <div class="col-md-4 form-group mt-3 ">
               <div class="input-tab">
-              <input class="input-field form-control" type="text" id="name" name="preg" placeholder="Pregnancies" required autofocus></div>
+              <input class="input-field form-control" type="text" id="name" name="sex" placeholder="sex" required autofocus></div>
               <div class="validate"></div>
             </div>
 
             <div class="col-md-4 form-group mt-3  ">
               <div class="input-tab">
-              <input class="input-field form-control" type="text" id="email" name="gluc" placeholder="Glucose Level" required></div>
+              <input class="input-field form-control" type="text" id="email" name="cig" placeholder="cigarettes per day" required></div>
               <div class="validate"></div>
             </div>
 
             <div class="col-md-4 form-group mt-3">
               <div class="input-tab">
-              <input class="input-field form-control" type="text" id="number" name="bp"  placeholder="BloodPressure" required></div>
+              <input class="input-field form-control" type="text" id="number" name="sysBP"  placeholder="Systolic Blood Pressure" required></div>
               <div class="validate"></div>
             </div>
 
@@ -176,19 +163,19 @@
           <div class="row">
             <div class="col-md-4 form-group mt-3 ">
               <div class="input-tab">
-              <input class="input-field form-control" type="text" id="name" name="skin" placeholder="SkinThickness" required autofocus></div>
+              <input class="input-field form-control" type="text" id="name" name="diaBP" placeholder="Diastolic Blood Pressure" required autofocus></div>
               <div class="validate"></div>
             </div>
 
             <div class="col-md-4 form-group  mt-3 ">
               <div class="input-tab">
-              <input class="input-field form-control" type="text" id="email" name="insu" placeholder="Insulin" required></div>
+              <input class="input-field form-control" type="text" id="email" name="totChol" placeholder="Total Cholesterol" required></div>
               <div class="validate"></div>
             </div>
 
             <div class="col-md-4 form-group mt-3 ">
               <div class="input-tab">
-              <input class="input-field form-control" type="text" id="number" name="bmi"  placeholder="BMI" required></div>
+              <input class="input-field form-control" type="text" id="number" name="hyp"  placeholder="Hypertension" required></div>
               <div class="validate"></div>
             </div>
 
@@ -196,10 +183,15 @@
           <div class="row">
           <div class="col-md-4 form-group mt-3">
             <div class="input-tab">
-            <input class="input-field form-control" type="text" id="number" name="diapred"  placeholder="DiabetesPedigreeFunction" required></div>
+            <input class="input-field form-control" type="text" id="number" name="dia"  placeholder="Diabetes" required></div>
             <div class="validate"></div>
           </div>
-
+          <div class="col-md-4 form-group mt-3 ">
+            <div class="input-tab">
+            <input class="input-field form-control" type="text" id="name" name="bloodpre" placeholder="Blood Pressure" required autofocus></div>
+            <div class="validate"></div>
+          </div>
+          
          <!-- <div class="labels">
           <label for="dropdown">Pregnancies</label></div>
         <div class="input-tab">
@@ -258,82 +250,80 @@
 <!-- End Appointment Section -->
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
+  <!-- footer -->
 
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Medilab</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
-        </div>
-      </div>
+  <footer class="text-center text-white" style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container pt-4">
+      <!-- Section: Social media -->
+      <section class="mb-4">
+        <!-- Facebook -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
     </div>
-
-    <div class="container d-md-flex py-4">
-
-      <div class="me-md-auto text-center text-md-start">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Medilab</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2020 Copyright:
+      <a class="text-dark" href="/">Hygeia.com</a>
     </div>
-  </footer><!-- End Footer -->
+    <!-- Copyright -->
+  </footer>
 
+    <!-- End of Footer -->
+ 
   <div id="preloader"></div>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

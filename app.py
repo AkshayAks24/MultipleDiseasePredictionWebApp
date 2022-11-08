@@ -1,32 +1,14 @@
-from flask import Flask,redirect,url_for,render_template,request
+from flask import Flask,render_template,redirect,request,url_for
 import utill
-# from flask_bootstrap import Bootstrap
+app =  Flask(__name__)
 
-app = Flask(__name__)
+@app.route("/")
+def home():
+    return render_template("index.html")
 
-# bootstrap = Bootstrap()
-# bootstrap.init_app(app)
-
-@app.route('/')
-def welcome():
-    return render_template('index.html')
-
-@app.route('/result/<str>')
-def result(str):
-    return render_template('result.html', status = str)
-
-
-@app.route('/resultt')
-def resultt():
-    return render_template('result.html')
-# @app.route('/fail/<int:score>')
-# def fail(score):
-#     status = 'FAILED'
-#     return render_template('result.html', finalScore = score,status = status)
-
-@app.route('/diabetespred.html')
+@app.route('/diabetes.html')
 def diabetes():
-    return render_template('diabetespred.html')
+    return render_template('diabetes.html')
 
 @app.route('/chd.html')
 def chd():
@@ -40,14 +22,11 @@ def parkinsons():
 def breastcancer():
     return render_template('breastcancer.html')
 
+# @app.route('/result/<str>')
+# def result(str):
+#     return render_template('result.html', status = str)
 
-@app.route('/inner-page.html')
-def breastcancer_0():
-    return render_template('inner-page.html')
 
-@app.route('/inner-page-copy.html')
-def breastcancer_02():
-    return render_template('inner-page-copy.html')
 
 
 @app.route('/submitdia',methods = [ 'POST','GET'])
@@ -62,9 +41,15 @@ def submitdia():
         bmi = float(request.form['bmi'])
         DiaPredFunc = float(request.form['diapred'])
         res = utill.dia_prediction([pregnancies,glucose,bloodPressure,skinThickness,insulin,bmi,DiaPredFunc,age])
-        return redirect(url_for("result", str = res ))   
+        return render_template("result.html", status = res )
 
 
+
+
+
+ 
+
+    
 @app.route('/submitchd',methods = [ 'POST','GET'])
 def submitchd():
     if request.method == 'POST':
@@ -79,13 +64,58 @@ def submitchd():
         glucose = float(request.form['glucose'])
         bloodpre = float(request.form['bloodpre'])
         res = utill.chd_prediction([age,sex,cig,sysBP,diaBP,totChol,hyp,dia,glucose,bloodpre])
-        return redirect(url_for("result", str = res ))  
+        return render_template("result.html", status = res )
 
-    
+@app.route('/submitpar',methods = [ 'POST','GET'])
+def submitpar():
+    if request.method == 'POST':
+        age = float(request.form['age'])
+        sex = float(request.form['sex'])
+        cig = float(request.form['cig'])
+        sysBP = float(request.form['sysBP'])
+        diaBP = float(request.form['diaBP'])
+        totChol = float(request.form['totChol'])
+        hyp = float(request.form['hyp'])
+        dia = float(request.form['dia'])
+        glucose = float(request.form['glucose'])
+        bloodpre = float(request.form['bloodpre'])
+        res = utill.par_prediction([age,sex,cig,sysBP,diaBP,totChol,hyp,dia,glucose,bloodpre])
+        return render_template("result.html", status = res )
 
 
 
-    
+@app.route('/submitbre',methods = [ 'POST','GET'])
+def submitbre():
+    if request.method == 'POST':
+        age = float(request.form['age'])
+        sex = float(request.form['sex'])
+        cig = float(request.form['cig'])
+        sysBP = float(request.form['sysBP'])
+        diaBP = float(request.form['diaBP'])
+        totChol = float(request.form['totChol'])
+        hyp = float(request.form['hyp'])
+        dia = float(request.form['dia'])
+        glucose = float(request.form['glucose'])
+        bloodpre = float(request.form['bloodpre'])
+        res = utill.bre_prediction([age,sex,cig,sysBP,diaBP,totChol,hyp,dia,glucose,bloodpre])
+        return render_template("result.html", status = res )
 
-if __name__ ==  '__main__':
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+if __name__ == "__main__":
     app.run(debug=True)
+    
